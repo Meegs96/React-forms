@@ -5,13 +5,16 @@ import SignUpForm from "./signupform";
 
 
 
+function App() {
+  const [token, setToken] = useState(null);
 
-export default function App() {
   return (
     <>
-      <Authenticate />
-      <SignUpForm />
+      <SignUpForm token={token} setToken={setToken} />
+      <Authenticate token={token} setToken={setToken} />
     </>
   );
 }
+
+export default App;
 
